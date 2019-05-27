@@ -11,7 +11,7 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
 
-    public DataLoader(){
+    public DataLoader() {
         ownerService = new OwnerMapService();
     }
 
