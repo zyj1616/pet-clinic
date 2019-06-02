@@ -1,5 +1,6 @@
 package springframework.petclinic.services.springdataJPA;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import springframework.petclinic.models.Owner;
 import springframework.petclinic.repositories.OwnerRepository;
@@ -8,10 +9,13 @@ import springframework.petclinic.repositories.PetTypeRepository;
 import springframework.petclinic.services.OwnerService;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
+@Profile("springDataJpa")
 public class OwnerSDJpaService implements OwnerService {
+
 
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
@@ -51,7 +55,13 @@ public class OwnerSDJpaService implements OwnerService {
     }
 
     @Override
-    public void deleteById(Long aLong) {
+    public void deleteById(Long aLong){
         ownerRepository.deleteById(aLong);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        //todo impl
+        return null;
     }
 }
