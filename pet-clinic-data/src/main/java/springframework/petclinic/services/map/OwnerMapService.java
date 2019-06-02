@@ -1,6 +1,6 @@
 package springframework.petclinic.services.map;
 
-import springframework.petclinic.model.Owner;
+import springframework.petclinic.models.Owner;
 import springframework.petclinic.services.OwnerService;
 
 import java.util.Set;

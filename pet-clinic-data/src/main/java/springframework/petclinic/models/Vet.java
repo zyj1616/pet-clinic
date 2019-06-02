@@ -1,4 +1,4 @@
-package springframework.petclinic.model;
+package springframework.petclinic.models;
 
 import java.util.Set;
 
