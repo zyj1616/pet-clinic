@@ -1,9 +1,12 @@
 package springframework.petclinic.models;
 
+import lombok.Builder;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
+@Builder
 @Table(name = "specialities")
 public class Speciality extends BaseEntity {
 
